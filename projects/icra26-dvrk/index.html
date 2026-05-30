@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overcoming Imperfect Kinematics in Surgical Robotics</title>
+  <meta name="description"
+    content="Sim-to-real visuomotor learning that compensates for surgical-robot kinematic inaccuracies via closed-loop visual feedback on the da Vinci Research Kit. ICRA 2026.">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Overcoming Imperfect Kinematics in Surgical Robotics Through Sim-to-Real Visuomotor Learning">
+  <meta property="og:description" content="A teacher-student visuomotor controller that compensates for surgical-robot kinematic errors using external vision. ICRA 2026.">
+  <meta property="og:image" content="static/images/graphical_abstract.png">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <style>
+    .back-bar {
+      background: #0f172a;
+      padding: 0.6rem 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    .back-bar a {
+      color: #93c5fd;
+      font-size: 0.875rem;
+      font-family: -apple-system, 'Inter', sans-serif;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .back-bar a:hover { color: #fff; }
+  </style>
+</head>
+
+<body>
+
+<!-- ============ BACK NAV ============ -->
+<div class="back-bar">
+  <a href="../../index.html">
+    <i class="fas fa-chevron-left"></i> Kaizhong Deng — Personal Page
+  </a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h1 class="title is-2 publication-title">
+        Overcoming Imperfect Kinematics in Surgical Robotics
+        <br>Through Sim-to-Real Visuomotor Learning
+      </h1>
+
+      <div class="is-size-5 publication-authors" style="margin-top:1rem;">
+        <span class="author-block">Zhaoxuan Yan<sup>1,2</sup>,</span>
+        <span class="author-block">Kaizhong Deng<sup>1,2</sup>,</span>
+        <span class="author-block">Zhaoyang Jacopo Hu<sup>1,3</sup>,</span>
+        <span class="author-block">George P. Mylonas<sup>1,2</sup>,</span>
+        <span class="author-block">Daniel S. Elson<sup>*1,2</sup></span>
+      </div>
+
+      <div class="affiliation is-size-6">
+        <sup>1</sup>Hamlyn Centre for Robotic Surgery, Institute of Global Health Innovation, Imperial College London &nbsp;·&nbsp;
+        <sup>2</sup>Department of Surgery and Cancer, Imperial College London &nbsp;·&nbsp;
+        <sup>3</sup>Department of Mechanical Engineering, Imperial College London
+        <br><span style="font-size:0.9rem;"><sup>*</sup>Corresponding author: daniel.elson@imperial.ac.uk</span>
+      </div>
+
+      <div><span class="venue-badge">ICRA 2026 &nbsp;·&nbsp; Accepted</span></div>
+
+      <div class="link-buttons">
+        <a class="button" href="static/pdfs/paper.pdf">
+          <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper (PDF)</span>
+        </a>
+        <a class="button" href="#video">
+          <span class="icon"><i class="fas fa-video"></i></span><span>Video</span>
+        </a>
+        <a class="button" href="#poster">
+          <span class="icon"><i class="fas fa-image"></i></span><span>Poster</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GRAPHICAL ABSTRACT / TEASER ============ -->
+<section class="section" style="padding-top:0;">
+  <div class="container is-max-desktop">
+    <figure class="teaser has-text-centered">
+      <img src="static/images/graphical_abstract.png"
+           alt="Graphical abstract: teacher-student visuomotor learning for the dVRK.">
+      <figcaption class="caption">
+        We propose a learning framework that actively compensates for a surgical robot's kinematic
+        inaccuracies by training a visuomotor controller within a teacher&ndash;student paradigm. The policy
+        learns to fuse unreliable proprioceptive data with reliable visual feedback, enabling robust
+        generalization to variations in camera viewpoint and workspace relocation upon sim-to-real
+        deployment to a physical dVRK.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ ABSTRACT ============ -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-title">Abstract</h2>
+    <div class="content abstract-text">
+      <p>
+        Robot-Assisted Surgery is integral to modern minimally invasive procedures, with automation
+        emerging as the next frontier to enhance precision and reduce surgeon fatigue. This evolution is
+        largely impeded by the inherent kinematic inaccuracies of surgical robots, where unreliable
+        internal sensors lead to significant control errors. While previous methods attempted to mitigate
+        these issues through complex model-based calibration, they often suffer from high cost and limited
+        effectiveness. This work utilises a learning-policy to actively compensate for hardware
+        inaccuracies using closed-loop visual feedback that was trained from a teacher-student learning
+        framework. The policy can fuse unreliable internal readings with precise external visual data,
+        allowing it to correct for kinematic errors in real time without needing a perfect physical model.
+        The learned policy was successfully deployed on the da Vinci Research Kit, where experiments
+        validated the fundamental feasibility of using external vision to overcome internal sensor
+        deficits. This research provides a foundational and reliable control methodology, paving the way
+        for more advanced and robust surgical automation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHOD ============ -->
+<section class="section" style="background:#fafafa;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-title">Method</h2>
+    <div class="content abstract-text">
+      <p>
+        Our approach centres on a <strong>teacher&ndash;student learning framework</strong> designed for
+        sim-to-real transfer. An <em>ideal teacher</em> policy is first trained in simulation with
+        reinforcement learning (PPO) using privileged state information, then fine-tuned under joint
+        perturbations to become a robust &ldquo;recovery expert&rdquo;. A <em>realistic student</em> policy
+        &mdash; a Transformer inspired by ACT &mdash; is then distilled from the teacher via interactive
+        imitation learning (DAgger). The student learns to <strong>fuse unreliable proprioception with five
+        external 2D keypoints</strong> tracked on the instrument, compensating for kinematic errors in
+        closed loop. Domain randomisation over joint biases and camera pose yields a view-invariant policy
+        that transfers directly to the physical <strong>da Vinci Research Kit (dVRK)</strong>, where it
+        outperforms classical IK replay and a learning-based ACT baseline under workspace relocation and
+        viewpoint variation.
+      </p>
+    </div>
+
+    <figure class="figure has-text-centered" style="margin-top:1.5rem;">
+      <img src="static/images/pipeline.png"
+           alt="Training framework overview: teleoperation, teacher RL training, student DAgger distillation, parallel simulation, and real-world deployment.">
+      <figcaption class="caption">
+        <strong>Overview of the training framework.</strong>
+        (a) Expert trajectories are collected via teleoperation.
+        (b) A teacher policy is trained in simulation with RL and fine-tuned with joint disturbances for
+        robust recovery behaviour.
+        (c) A student policy distils the teacher via DAgger, learning to fuse biased proprioception with
+        external visual keypoints.
+        (d) Training uses many parallel dVRK environments; tracked keypoints are colour-labelled.
+        (e) The trained student policy is deployed directly on the physical robot.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="section" id="video">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-title">Video</h2>
+    <div class="video-wrapper">
+      <video controls preload="metadata" poster="static/images/graphical_abstract.png">
+        <source src="static/videos/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POSTER ============ -->
+<section class="section" id="poster" style="background:#fafafa;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-title">Poster</h2>
+    <embed class="poster-embed" src="static/pdfs/poster.pdf" type="application/pdf">
+    <p class="has-text-centered" style="margin-top:1rem;">
+      <a class="button" href="static/pdfs/poster.pdf">
+        <span class="icon"><i class="fas fa-download"></i></span><span>Download poster (PDF)</span>
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ BIBTEX ============ -->
+<section class="section" id="bibtex">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-title">BibTeX</h2>
+    <pre class="bibtex">@inproceedings{yan2026overcoming,
+  title     = {Overcoming Imperfect Kinematics in Surgical Robotics
+               Through Sim-to-Real Visuomotor Learning},
+  author    = {Yan, Zhaoxuan and Deng, Kaizhong and Hu, Zhaoyang Jacopo
+               and Mylonas, George P. and Elson, Daniel S.},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2026}
+}</pre>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container has-text-centered footer-small">
+    <p>
+      This is independent research funded by the National Institute for Health Research (NIHR) Imperial
+      Biomedical Research Centre (BRC), the Cancer Research UK (CRUK) Imperial Centre, and the Wellcome
+      Trust ITPA MedTechOne awards.
+    </p>
+    <p style="margin-top:0.75rem;">
+      Page template adapted from the
+      <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page
+      (<a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>).
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

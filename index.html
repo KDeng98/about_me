@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaizhong Deng — PhD Candidate, Robotics & AI</title>
+  <meta name="description"
+    content="Kaizhong Deng — final-year PhD candidate at Imperial College London's Hamlyn Centre, working on autonomous surgical robotics, imitation learning, and computer vision. Open to research scientist / research engineer roles from Oct 2026." />
+  <meta name="author" content="Kaizhong Deng" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Kaizhong Deng — PhD Candidate, Robotics & AI for Healthcare" />
+  <meta property="og:description" content="Autonomous surgical robotics · imitation learning · computer vision. Open to research scientist / research engineer roles from Oct 2026." />
+  <meta property="og:image" content="projects/icra26-dvrk/static/images/graphical_abstract.png" />
+  <meta property="og:type" content="profile" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Announcement bar: project pages -->
+  <div id="announce-bar">
+    <span class="announce-label"><i class="fas fa-flask"></i> Project Pages:</span>
+    <a href="projects/icra26-dvrk/index.html" class="announce-link" target="_blank">
+      <span class="announce-venue">ICRA 2026</span>
+      Overcoming Imperfect Kinematics in Surgical Robotics Through Sim-to-Real Visuomotor Learning
+      <i class="fas fa-arrow-right announce-arrow"></i>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <span class="nav-brand">Kaizhong Deng</span>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#activities">Mentoring</a></li>
+        <li><a href="projects/icra26-dvrk/index.html" target="_blank" class="nav-projects">
+          <i class="fas fa-flask"></i> Projects
+        </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="hero">
+    <div class="hero-content">
+      <div class="hero-avatar">
+        <div class="avatar-placeholder">KD</div>
+      </div>
+      <div class="hero-text">
+        <h1>Kaizhong Deng</h1>
+        <p class="hero-title">PhD Candidate · Robotics &amp; AI for Healthcare</p>
+        <p class="hero-affiliation">
+          <i class="fas fa-university"></i>
+          The Hamlyn Centre for Robotic Surgery, Imperial College London
+        </p>
+        <p class="hero-subtitle">Expected graduation: October 2026</p>
+
+        <!-- Open to Work badge -->
+        <div class="otw-badge">
+          <span class="otw-dot"></span>
+          <span class="otw-label">Open to Work</span>
+          <span class="otw-divider">·</span>
+          <span class="otw-detail">Available from Oct 2026</span>
+          <span class="otw-divider">·</span>
+          <span class="otw-roles">Research Scientist &amp; Research Engineer · Robotics</span>
+        </div>
+
+        <div class="hero-tags">
+          <span class="tag">Embodied AI</span>
+          <span class="tag">Medical Robotics</span>
+          <span class="tag">Imitation Learning</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Visual Servoing</span>
+        </div>
+        <div class="hero-links">
+          <a href="mailto:k.deng21@imperial.ac.uk" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> Email Me
+          </a>
+          <a href="https://www.linkedin.com/in/kaizhong-deng/" class="btn btn-linkedin" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://scholar.google.com/citations?hl=en&amp;user=bnMXxZIAAAAJ" class="btn btn-scholar" target="_blank" rel="noopener">
+            <i class="fas fa-graduation-cap"></i> Google Scholar
+          </a>
+        </div>
+        <div class="hero-contacts">
+          <span><i class="fas fa-envelope"></i> k.deng21@imperial.ac.uk</span>
+          <a href="https://www.linkedin.com/in/kaizhong-deng/" class="hero-contact-link" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i> kaizhong-deng
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#about"><i class="fas fa-chevron-down"></i></a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title"><span>About Me</span></h2>
+        <div class="about-content">
+          <div class="about-tldr">
+            <span class="tldr-label">TL;DR</span>
+            <p>I specialize in autonomous surgical robotics integrating computer vision, robot learning,
+            and control, with extensive real-robot experience in medical applications.</p>
+          </div>
+          <p>
+            I'm a final-year PhD candidate (expected October 2026) at
+            <strong>Imperial College London's Hamlyn Centre for Robotic Surgery</strong>, developing
+            autonomous robotic systems that push the boundaries of surgical precision and safety.
+            My research bridges <em>computer vision</em>, <em>imitation learning</em>,
+            <em>deep reinforcement learning</em>, and <em>robotics control</em> to enable robots
+            to perform complex medical instrument manipulation tasks.
+          </p>
+          <p>
+            With a track record that includes first-author publications at <strong>ICRA</strong>,
+            experience integrating cutting-edge Vision-Language-Action models at
+            <strong>Kinisi Robotics</strong>, and hands-on work with platforms from
+            <strong>da Vinci surgical robots</strong> to <strong>KUKA systems</strong>, I specialise
+            in translating AI advances into practical robotic solutions. My work on sim-to-real
+            learning and visual servoing has achieved <strong>human-level performance</strong> in
+            medical sampling tasks.
+          </p>
+          <p>
+            I'm actively seeking opportunities for <strong>full-time robotics research engineer
+            positions starting Autumn 2026</strong>, passionate about advancing robotics and AI
+            systems that solve real-world challenges and bridge the gap between research and
+            deployment.
+          </p>
+          <div class="about-callout">
+            <i class="fas fa-palette"></i>
+            <p>If you are interested in introducing robotics and AI technology into
+            <strong>Device Art</strong> or any form of art expression — please feel free to reach out!</p>
+          </div>
+          <p class="about-connect">
+            <i class="fas fa-handshake"></i>
+            Open to discussing industry opportunities and research collaborations in AI and
+            robotics — feel free to <a href="mailto:k.deng21@imperial.ac.uk">connect</a>!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span>Education</span></h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-marker phd"></div>
+            <div class="timeline-content card">
+              <div class="card-header">
+                <div>
+                  <h3>PhD in Robotics and AI for Healthcare</h3>
+                  <p class="institution">
+                    <i class="fas fa-university"></i>
+                    Imperial College London — The Hamlyn Centre for Robotic Surgery
+                  </p>
+                </div>
+                <span class="badge badge-blue">Oct 2022 – Oct 2026</span>
+              </div>
+              <div class="card-body">
+                <p><strong>Research topic:</strong> Autonomous Robotic System for Medical Instrument Manipulation</p>
+                <p><strong>Thesis:</strong> Robotic-Assisted Diffuse Reflectance Spectroscopy Sampling for Tissue Assessment: From Model-Driven Control to Learned Policies</p>
+                <div class="tag-group">
+                  <span class="tag-sm">Medical Robotics</span>
+                  <span class="tag-sm">Computer Vision</span>
+                  <span class="tag-sm">Imitation Learning</span>
+                  <span class="tag-sm">Visual Servoing</span>
+                  <span class="tag-sm">Deep Learning</span>
+                </div>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> London, UK</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker mres"></div>
+            <div class="timeline-content card">
+              <div class="card-header">
+                <div>
+                  <h3>MRes in Medical Robotics &amp; Image-guided Intervention</h3>
+                  <p class="institution">
+                    <i class="fas fa-university"></i>
+                    Imperial College London — The Hamlyn Centre for Robotic Surgery
+                  </p>
+                </div>
+                <span class="badge badge-green">Oct 2021 – Oct 2022</span>
+              </div>
+              <div class="card-body">
+                <p><strong>Thesis:</strong> Imitation Learning for Robotic Radio Sensor Manipulation</p>
+                <div class="score-row">
+                  <span class="score-item"><i class="fas fa-star"></i> Overall: 78.1%</span>
+                  <span class="score-item"><i class="fas fa-trophy"></i> Rank: Top 10%</span>
+                  <span class="score-item"><i class="fas fa-scroll"></i> Thesis: 79.8%</span>
+                  <span class="score-item"><i class="fas fa-medal"></i> Distinction</span>
+                </div>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> London, UK</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker beng"></div>
+            <div class="timeline-content card">
+              <div class="card-header">
+                <div>
+                  <h3>BEng in Mechatronics and Robotic Systems</h3>
+                  <p class="institution">
+                    <i class="fas fa-university"></i>
+                    University of Liverpool
+                    <span class="institution-note">(2+2 with Xi'an Jiaotong-Liverpool University)</span>
+                  </p>
+                </div>
+                <span class="badge badge-purple">Oct 2017 – Jun 2021</span>
+              </div>
+              <div class="card-body">
+                <p><strong>Final year project:</strong> Deep learning segmentation tools for lung X-ray images (COVID-19)</p>
+                <div class="score-row">
+                  <span class="score-item"><i class="fas fa-star"></i> GPA: 3.92</span>
+                  <span class="score-item"><i class="fas fa-trophy"></i> Rank: 1st / 60</span>
+                  <span class="score-item"><i class="fas fa-scroll"></i> Thesis: 85%</span>
+                  <span class="score-item"><i class="fas fa-medal"></i> First Class</span>
+                </div>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Liverpool, UK &amp; Suzhou, China</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Experience Section -->
+    <section id="research" class="section">
+      <div class="container">
+        <h2 class="section-title"><span>Research Experience</span></h2>
+        <div class="research-list">
+
+          <div class="research-card card">
+            <div class="research-card-header">
+              <div class="research-icon"><i class="fas fa-robot"></i></div>
+              <div class="research-card-meta">
+                <h3>End-to-End Learning for Autonomous Surgical Instrument Manipulation</h3>
+                <span class="badge badge-blue">2025 – Present</span>
+              </div>
+            </div>
+            <p class="research-vague">
+              An ongoing research project developing a complete autonomous robotic learning pipeline
+              for surgical instrument manipulation, integrating multimodal sensing with advanced
+              generative policy architectures. Demonstrated significant real-world performance
+              improvements on a clinical surgical robot platform. Details withheld pending publication.
+            </p>
+            <div class="tag-group" style="margin-top:1rem;">
+              <span class="tag-sm">Imitation Learning</span>
+              <span class="tag-sm">Diffusion Policy</span>
+              <span class="tag-sm">World Models</span>
+              <span class="tag-sm">Multimodal Sensing</span>
+              <span class="tag-sm">da Vinci Surgical Robot</span>
+              <span class="tag-sm">Computer Vision</span>
+              <span class="tag-sm">Visual Servoing</span>
+              <span class="tag-sm">Spectroscopy</span>
+            </div>
+          </div>
+
+          <div class="research-card card">
+            <div class="research-card-header">
+              <div class="research-icon"><i class="fas fa-sync-alt"></i></div>
+              <div class="research-card-meta">
+                <h3>Sim-to-Real Learning from Demonstration for Imperfect Kinematics</h3>
+                <span class="badge badge-green">2024 – 2025</span>
+              </div>
+            </div>
+            <ul class="research-points">
+              <li>Employed <strong>Reinforcement Learning</strong> to train a robust policy in simulation with domain randomisation.</li>
+              <li>Proposed teacher-student training to distil policy with privilege information and extend perception capabilities.</li>
+              <li>Improved spatial generalisation for uncovered workspace by <strong>81%</strong>.</li>
+            </ul>
+            <div class="publication-badge">
+              <i class="fas fa-file-alt"></i>
+              Published at <strong>ICRA 2026</strong> — Co-1st Author
+            </div>
+          </div>
+
+          <div class="research-card card">
+            <div class="research-card-header">
+              <div class="research-icon"><i class="fas fa-radiation"></i></div>
+              <div class="research-card-meta">
+                <h3>Reinforcement Learning for Robotic-Assisted Radio Tracer Detection</h3>
+                <span class="badge badge-orange">2023 – 2024</span>
+              </div>
+            </div>
+            <ul class="research-points">
+              <li>Developed an adaptive scanning method to enhance initial detection robustness.</li>
+              <li>Designed a <strong>deep reinforcement learning framework</strong> with reward shaping to optimise radiotracer detection precision and operational efficiency.</li>
+              <li>Validated on simulated and real surgical robot systems, demonstrating an <strong>80% success rate</strong>.</li>
+            </ul>
+            <div class="publication-badge">
+              <i class="fas fa-file-alt"></i>
+              Published at <strong>ICRA 2025</strong> — 2nd Author
+            </div>
+          </div>
+
+          <div class="research-card card">
+            <div class="research-card-header">
+              <div class="research-icon"><i class="fas fa-microscope"></i></div>
+              <div class="research-card-meta">
+                <h3>Autonomous Robotic-Assisted Spectroscopy Sampling System</h3>
+                <span class="badge badge-purple">2022 – 2024</span>
+              </div>
+            </div>
+            <ul class="research-points">
+              <li>Collaborated across interdisciplinary teams (clinicians, engineers, researchers) to translate clinical needs into technical solutions.</li>
+              <li>Designed a complete robotic system integrating a <strong>KUKA arm</strong> with multiple sensors.</li>
+              <li>Proposed a vision-based precise <strong>contact state estimation</strong> module for millimetre-level control.</li>
+              <li>Minimised variance to <strong>human-level intra-observer variance</strong> as gold-standard manual sampling.</li>
+            </ul>
+            <div class="publication-badge">
+              <i class="fas fa-file-alt"></i>
+              Published at <strong>ICRA 2025</strong> — 1st Author
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span>Industry Experience</span></h2>
+        <div class="card experience-card">
+          <div class="card-header">
+            <div class="exp-logo">
+              <i class="fas fa-industry"></i>
+            </div>
+            <div>
+              <h3>Robotics Research Engineer — Intern</h3>
+              <p class="institution">
+                <i class="fas fa-building"></i>
+                Robot Learning Team, <strong>Kinisi Robotics</strong> — Bristol &amp; London, UK
+              </p>
+            </div>
+            <span class="badge badge-blue">March – September 2025</span>
+          </div>
+          <div class="card-body">
+            <ul class="exp-points">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Integrated and trained <strong>Vision-Language-Action (VLA)</strong> models
+                including PI0, PI0FAST, and GR00T for autonomous warehouse manipulation tasks
+                in simulation and on physical robots.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Developed simulation environments for benchmarking <strong>bimanual humanoid robotics</strong> policies.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Optimised ML policy training pipelines and evaluation infrastructure.
+              </li>
+            </ul>
+            <div class="tag-group" style="margin-top:1rem;">
+              <span class="tag-sm">VLA Models</span>
+              <span class="tag-sm">PI0 / PI0FAST</span>
+              <span class="tag-sm">GR00T</span>
+              <span class="tag-sm">Isaac Sim</span>
+              <span class="tag-sm">Bimanual Robotics</span>
+              <span class="tag-sm">Policy Learning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title"><span>Technical Skills</span></h2>
+        <p class="section-intro">
+          Core tools and methods I use across surgical robotics, robot learning, and computer vision.
+        </p>
+        <div class="skills-grid">
+
+          <div class="skill-row">
+            <span class="skill-cat"><i class="fas fa-code"></i> Languages &amp; Libraries</span>
+            <div class="tag-group">
+              <span class="tag-sm">Python</span>
+              <span class="tag-sm">PyTorch</span>
+              <span class="tag-sm">NumPy</span>
+              <span class="tag-sm">OpenCV</span>
+              <span class="tag-sm">C++</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-cat"><i class="fas fa-brain"></i> Robot Learning</span>
+            <div class="tag-group">
+              <span class="tag-sm">Imitation Learning (ACT, DAgger)</span>
+              <span class="tag-sm">Reinforcement Learning (PPO)</span>
+              <span class="tag-sm">Diffusion Policy</span>
+              <span class="tag-sm">World Models</span>
+              <span class="tag-sm">VLA Models (PI0 / GR00T)</span>
+              <span class="tag-sm">Transformers</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-cat"><i class="fas fa-robot"></i> Robotics &amp; Control</span>
+            <div class="tag-group">
+              <span class="tag-sm">Visual Servoing</span>
+              <span class="tag-sm">Visuomotor Control</span>
+              <span class="tag-sm">da Vinci Research Kit (dVRK)</span>
+              <span class="tag-sm">KUKA</span>
+              <span class="tag-sm">Teleoperation</span>
+              <span class="tag-sm">ROS</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-cat"><i class="fas fa-cube"></i> Simulation &amp; Sim-to-Real</span>
+            <div class="tag-group">
+              <span class="tag-sm">Isaac Sim</span>
+              <span class="tag-sm">Domain Randomisation</span>
+              <span class="tag-sm">Sim-to-Real Transfer</span>
+              <span class="tag-sm">Teacher–Student Distillation</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-cat"><i class="fas fa-eye"></i> Vision &amp; Medical Optics</span>
+            <div class="tag-group">
+              <span class="tag-sm">Computer Vision</span>
+              <span class="tag-sm">Keypoint Tracking</span>
+              <span class="tag-sm">Image Segmentation</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span>Publications</span></h2>
+        <div class="publications-list">
+
+          <div class="pub-item card">
+            <div class="pub-number">1</div>
+            <div class="pub-content">
+              <p class="pub-authors">
+                Z. Yan, <strong>K. Deng</strong>, Z. J. Hu, G. P. Mylonas, D. S. Elson
+              </p>
+              <p class="pub-title">
+                <a href="projects/icra26-dvrk/index.html" target="_blank" class="pub-link">
+                  "Overcoming Imperfect Kinematics in Surgical Robotics Through Sim-to-Real Visuomotor Learning"
+                  <i class="fas fa-external-link-alt pub-link-icon"></i>
+                </a>
+              </p>
+              <p class="pub-venue">
+                <span class="venue-badge venue-icra26">ICRA 2026</span>
+                IEEE International Conference on Robotics and Automation, 2026 — Accepted
+              </p>
+              <div class="pub-tags">
+                <span class="pub-role">Co-1st Author</span>
+                <span class="pub-field">Surgical Robotics · Sim-to-Real · Visuomotor Learning</span>
+                <a href="projects/icra26-dvrk/index.html" target="_blank" class="pub-page-btn">
+                  <i class="fas fa-globe"></i> Project Page
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pub-item card">
+            <div class="pub-number">2</div>
+            <div class="pub-content">
+              <p class="pub-authors"><strong>K. Deng</strong>, et al.</p>
+              <p class="pub-title">
+                <a href="https://arxiv.org/abs/2503.08470" target="_blank" rel="noopener" class="pub-link">
+                  "Automatic Robotic-Assisted Diffuse Reflectance Spectroscopy Scanning System"
+                  <i class="fas fa-external-link-alt pub-link-icon"></i>
+                </a>
+              </p>
+              <p class="pub-venue">
+                <span class="venue-badge venue-icra">ICRA 2025</span>
+                IEEE International Conference on Robotics and Automation, 2025
+              </p>
+              <div class="pub-tags">
+                <span class="pub-role">1st Author</span>
+                <span class="pub-field">Medical Robotics · Spectroscopy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pub-item card">
+            <div class="pub-number">3</div>
+            <div class="pub-content">
+              <p class="pub-authors">H. Zhang, <strong>K. Deng</strong>, et al.</p>
+              <p class="pub-title">
+                <a href="https://arxiv.org/abs/2503.08492" target="_blank" rel="noopener" class="pub-link">
+                  "Hybrid Deep Reinforcement Learning for Radio Tracer Localisation in Robotic-Assisted Radioguided Surgery"
+                  <i class="fas fa-external-link-alt pub-link-icon"></i>
+                </a>
+              </p>
+              <p class="pub-venue">
+                <span class="venue-badge venue-icra">ICRA 2025</span>
+                IEEE International Conference on Robotics and Automation, 2025
+              </p>
+              <div class="pub-tags">
+                <span class="pub-role">2nd Author</span>
+                <span class="pub-field">Surgical Robotics · Reinforcement Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pub-item card">
+            <div class="pub-number">4</div>
+            <div class="pub-content">
+              <p class="pub-authors"><strong>K. Deng</strong>, B. Huang, and D. S. Elson</p>
+              <p class="pub-title">
+                <a href="https://arxiv.org/abs/2304.14294" target="_blank" rel="noopener" class="pub-link">
+                  "Deep imitation learning for automated drop-in gamma probe manipulation"
+                  <i class="fas fa-external-link-alt pub-link-icon"></i>
+                </a>
+              </p>
+              <p class="pub-venue">
+                <span class="venue-badge venue-workshop">HSMR 2023</span>
+                15th Hamlyn Symposium on Medical Robotics, Jun. 2023
+              </p>
+              <div class="pub-tags">
+                <span class="pub-role">1st Author</span>
+                <span class="pub-field">Imitation Learning · Surgical Robotics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pub-item card">
+            <div class="pub-number">5</div>
+            <div class="pub-content">
+              <p class="pub-authors">B. Dong, J. Chen, Z. Wang, <strong>K. Deng</strong>, et al.</p>
+              <p class="pub-title">
+                <a href="https://doi.org/10.1109/ICRA57147.2024.10611534" target="_blank" rel="noopener" class="pub-link">
+                  "An intelligent robotic endoscope control system based on fusing natural language processing and vision models"
+                  <i class="fas fa-external-link-alt pub-link-icon"></i>
+                </a>
+              </p>
+              <p class="pub-venue">
+                <span class="venue-badge venue-icra">ICRA 2024</span>
+                IEEE International Conference on Robotics and Automation, 2024, pp. 8180–8186
+              </p>
+              <div class="pub-tags">
+                <span class="pub-field">Endoscopy · NLP · Computer Vision</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pub-item card">
+            <div class="pub-number">6</div>
+            <div class="pub-content">
+              <p class="pub-authors"><strong>K. Deng</strong>, et al.</p>
+              <p class="pub-title">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-030-87583-1_7" target="_blank" rel="noopener" class="pub-link">
+                  "TransBridge: A lightweight transformer for left ventricle segmentation in echocardiography"
+                  <i class="fas fa-external-link-alt pub-link-icon"></i>
+                </a>
+              </p>
+              <p class="pub-venue">
+                <span class="venue-badge venue-book">Book Chapter 2021</span>
+                Simplifying Medical Ultrasound, N. J. Alison et al. (Eds.), 2021, pp. 63–72
+              </p>
+              <div class="pub-tags">
+                <span class="pub-role">1st Author</span>
+                <span class="pub-field">Medical Imaging · Transformer · Segmentation</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentoring Section -->
+    <section id="activities" class="section">
+      <div class="container">
+        <h2 class="section-title"><span>Mentoring</span></h2>
+        <p class="section-intro">
+          Supervised and provided hands-on research guidance for <strong>10 MRes students</strong>
+          at the Hamlyn Centre, Imperial College London, across thesis projects in medical robotics
+          and robot learning.
+        </p>
+        <div class="mentor-grid">
+
+          <!-- 1 -->
+          <div class="mentor-card card">
+            <div class="mentor-card-top">
+              <span class="mentor-year">2025–2026</span>
+              <i class="fas fa-graduation-cap mentor-cap"></i>
+            </div>
+            <h4 class="mentor-title">Imitation Learning for Probe-Based Instrument Manipulation in Complex Surgical Environments</h4>
+            <div class="mentor-tags">
+              <span class="mtag mtag-il">Imitation Learning</span>
+              <span class="mtag mtag-mr">Medical Robotics</span>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="mentor-card card">
+            <div class="mentor-card-top">
+              <span class="mentor-year">2024–2025</span>
+              <i class="fas fa-graduation-cap mentor-cap"></i>
+            </div>
+            <h4 class="mentor-title">Learning Visuomotor Skills Under Uncertain Hand-Eye Coordination on the Surgical Robot</h4>
+            <div class="mentor-tags">
+              <span class="mtag mtag-il">Imitation Learning</span>
+              <span class="mtag mtag-cv">Computer Vision</span>
+              <span class="mtag mtag-rs">Robotic System</span>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="mentor-card card">
+            <div class="mentor-card-top">
+              <span class="mentor-year">2024–2025</span>
+              <i class="fas fa-graduation-cap mentor-cap"></i>
+            </div>
+            <h4 class="mentor-title">Imitation Learning for Shared Control for Surgical Task Automation</h4>
+            <div class="mentor-tags">
+              <span class="mtag mtag-il">Imitation Learning</span>
+              <span class="mtag mtag-rs">Robotic System</span>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="mentor-card card">
+            <div class="mentor-card-top">
+              <span class="mentor-year">2024–2025</span>
+              <i class="fas fa-graduation-cap mentor-cap"></i>
+            </div>
+            <h4 class="mentor-title">Robotics Tumour Detection with Tactile Sensor System</h4>
+            <div class="mentor-tags">
+              <span class="mtag mtag-mr">Medical Robotics</span>
+              <span class="mtag mtag-rs">Robotic System</span>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="mentor-card card">
+            <div class="mentor-card-top">
+              <span class="mentor-year">2024–2025</span>
+              <i class="fas fa-graduation-cap mentor-cap"></i>
+            </div>
+            <h4 class="mentor-title">Robotic System for Optical Instrument Scanning</h4>
+            <div class="mentor-tags">
+              <span class="mtag mtag-rs">Robotic System</span>
+              <span class="mtag mtag-mr">Medical Robotics</span>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="mentor-card card">
+            <div class="mentor-card-top">
+              <span class="mentor-year">2024–2025</span>
+              <i class="fas fa-graduation-cap mentor-cap"></i>
+            </div>
+            <h4 class="mentor-title">Developing a Dual-Arm Soft Robot System for Learning Endoscopic Submucosal Dissection from Demonstration</h4>
+            <div class="mentor-tags">
+              <span class="mtag mtag-il">Imitation Learning</span>
+              <span class="mtag mtag-rs">Robotic System</span>
+              <span class="mtag mtag-mr">Medical Robotics</span>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="mentor-card card">
+            <div class="mentor-card-top">
+              <span class="mentor-year">2023–2024</span>
+              <i class="fas fa-graduation-cap mentor-cap"></i>
+            </div>
+            <h4 class="mentor-title">Learning to Perform Hot-Spot Detection with Drop-In Gamma Probe: Enhance RL with Robust Initialisation from Primary Scanning</h4>
+            <div class="mentor-tags">
+              <span class="mtag mtag-rl">Reinforcement Learning</span>
+              <span class="mtag mtag-mr">Medical Robotics</span>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="mentor-card card">
+            <div class="mentor-card-top">
+              <span class="mentor-year">2023–2024</span>
+              <i class="fas fa-graduation-cap mentor-cap"></i>
+            </div>
+            <h4 class="mentor-title">Developing a Modular and Portable Surgical Robotic System for Automation Research</h4>
+            <div class="mentor-tags">
+              <span class="mtag mtag-rs">Robotic System</span>
+              <span class="mtag mtag-mr">Medical Robotics</span>
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div class="mentor-card card">
+            <div class="mentor-card-top">
+              <span class="mentor-year">2022–2023</span>
+              <i class="fas fa-graduation-cap mentor-cap"></i>
+            </div>
+            <h4 class="mentor-title">Learning Optical Instrument Scanning Skills via Imitation Learning and Reinforcement Learning</h4>
+            <div class="mentor-tags">
+              <span class="mtag mtag-il">Imitation Learning</span>
+              <span class="mtag mtag-rl">Reinforcement Learning</span>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="mentor-card card">
+            <div class="mentor-card-top">
+              <span class="mentor-year">2022–2023</span>
+              <i class="fas fa-graduation-cap mentor-cap"></i>
+            </div>
+            <h4 class="mentor-title">Learning Surgical Instrument Grasping Skills from Demonstrations for Robotic-Assisted Surgery</h4>
+            <div class="mentor-tags">
+              <span class="mtag mtag-il">Imitation Learning</span>
+              <span class="mtag mtag-mr">Medical Robotics</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>
+        <strong>Kaizhong Deng</strong> · PhD Candidate, Robotics &amp; AI · Imperial College London
+      </p>
+      <p class="footer-contact">
+        <a href="mailto:k.deng21@imperial.ac.uk">
+          <i class="fas fa-envelope"></i> k.deng21@imperial.ac.uk
+        </a>
+      </p>
+      <p class="footer-note">© 2026 Kaizhong Deng</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
